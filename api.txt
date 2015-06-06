@@ -1,0 +1,9 @@
+/api/devices/device
+/api/media/provider-capabilities
+/api/customer-status
+/api/authentication
+/api/music-account-details
+/api/notifications
+/api/third-party
+/api/device-preferences
+/api/wake-word
