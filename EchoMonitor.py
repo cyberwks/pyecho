@@ -1,7 +1,7 @@
 # A test script for PyEcho
 # By Scott Vanderlind, December 31 2014
 
-import PyEcho, getpass
+import PyEcho, getpass, json
 
 with open('api.txt', 'r') as f:
     apis = f.readlines()
@@ -18,4 +18,6 @@ if echo:
    for api in apis:
        api = api.strip()
        print "Using API : " + api
-       print echo.get(api).text
+       jsonPayload = echo.get(api).text
+       parsed = json.loads(jsonPayload)
+       print json.dumps(parsed, indent=4, sort_keys=True)
